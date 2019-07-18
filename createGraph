@@ -1,0 +1,41 @@
+CREATE(dahuaxiyou:Movie{name:'大话西游', released:1995})
+CREATE(liuzhenwei:Person{name:'刘镇伟', born:1952})
+CREATE(zhouxingchi:Person{name:'周星驰', born:1962})
+CREATE(wumengda:Person{name:'吴孟达', born:1952})
+CREATE(zhuyin:Person{name:'朱茵', born:1971})
+CREATE(caishaofen:Person{name:'蔡少芬', born:1973})
+CREATE(lanjieying:Person{name:'蓝洁瑛', born:1963})
+CREATE
+    (liuzhenwei)-[:DIRECTED]->(dahuaxiyou),
+    (zhouxingchi)-[:ACTED_IN{role:'至尊宝/孙悟空'}]->(dahuaxiyou),
+    (wumengda)-[:ACTED_IN{role:'二当家/猪八戒'}]->(dahuaxiyou),
+    (zhuyin)-[:ACTED_IN{role:'紫霞仙子'}]->(dahuaxiyou),
+    (caishaofen)-[:ACTED_IN{role:'铁扇公主'}]->(dahuaxiyou),
+    (lanjieying)-[:ACTED_IN{role:'春三十娘'}]->(dahuaxiyou)
+
+CREATE(gongfu:Movie{name:'功夫', released:2004})
+CREATE(yuanqiu:Person{name:'元秋', born:1950})
+CREATE(yuanhua:Person{name:'元华', born:1950})
+CREATE(huangshengyi:Person{name:'黄圣依', born:1983})
+CREATE(liangxiaolong:Person{name:'梁小龙', born:1948})
+CREATE
+    (zhouxingchi)-[:DIRECTED]->(gongfu),
+    (zhouxingchi)-[:ACTED_IN{role:'阿星'}]->(gongfu),
+    (yuanqiu)-[:ACTED_IN{role:'包租婆'}]->(gongfu),
+    (yuanhua)-[:ACTED_IN{role:'包租公'}]->(gongfu),
+    (huangshengyi)-[:ACTED_IN{role:'芳儿'}]->(gongfu),
+    (liangxiaolong)-[:ACTED_IN{role:'火云邪神'}]->(gongfu)
+
+CREATE(xiyouxiangmopian:Movie{name:'西游降魔篇', released:2013})
+CREATE(guozijian:Person{name:'郭子健', born:1976})
+CREATE(wenzhang:Person{name:'文章', born:1984})
+CREATE(shuqi:Person{name:'舒淇', born:1976})
+CREATE(huangbo:Person{name:'黄渤', born:1974})
+CREATE(luozhixiang:Person{name:'罗志祥', born:1979})
+CREATE
+    (zhouxingchi)-[:DIRECTED]->(xiyouxiangmopian),
+    (guozijian)-[:DIRECTED]->(xiyouxiangmopian),
+    (wenzhang)-[:ACTED_IN{role:'陈玄奘'}]->(xiyouxiangmopian),
+    (shuqi)-[:ACTED_IN{role:'段姑娘'}]->(xiyouxiangmopian),
+    (huangbo)-[:ACTED_IN{role:'孙悟空'}]->(xiyouxiangmopian),
+    (luozhixiang)-[:ACTED_IN{role:'空虚公子'}]->(xiyouxiangmopian)
